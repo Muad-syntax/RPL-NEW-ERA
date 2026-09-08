@@ -1,0 +1,234 @@
+/* ============================================================
+   XII RPL 2 — Design System
+   "Bold Youth, Clean Execution"
+   ============================================================ */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--color-deep-navy);
+  color: var(--color-on-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === CSS VARIABLES === */
+:root {
+  /* Warna Primer */
+  --color-solar-gold: #FFB800;
+  --color-amber-burst: #E8831A;
+  --color-deep-navy: #1E1B4B;
+
+  /* Warna Aksen */
+  --color-crimson-pop: #E63030;
+  --color-star-white: #FFFFFF;
+  --color-cloud-gray: #F0F2F8;
+
+  /* Warna Teks */
+  --color-ink: #1A1832;
+  --color-ink-muted: #4A4870;
+  --color-on-dark: #FFF9E6;
+
+  /* Gradien */
+  --gradient-hero: linear-gradient(135deg, #1E1B4B 0%, #2D2A6E 50%, #1E1B4B 100%);
+  --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFB800 50%, #E8831A 100%);
+  --gradient-card: linear-gradient(180deg, rgba(30,27,75,0) 0%, rgba(30,27,75,0.95) 100%);
+  --gradient-navy-light: linear-gradient(180deg, #2D2A6E 0%, #1E1B4B 100%);
+
+  /* Layout */
+  --container-max: 1200px;
+  --section-pad-desktop: 80px;
+  --section-pad-mobile: 48px;
+  --grid-gap: 24px;
+
+  /* Border Radius */
+  --radius-card: 12px;
+  --radius-pill: 8px;
+  --radius-avatar: 50%;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(30, 27, 75, 0.35);
+  --shadow-card-hover: 0 12px 40px rgba(30, 27, 75, 0.55);
+  --shadow-gold: 0 4px 20px rgba(255, 184, 0, 0.35);
+  --shadow-nav: 0 2px 32px rgba(30, 27, 75, 0.5);
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slide: 400ms ease-in-out;
+}
+
+/* === TYPOGRAPHY === */
+.font-display { font-family: 'Cinzel Decorative', serif; }
+.font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.text-display-2xl {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.text-display-xl {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.text-display-lg {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.text-heading-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.text-heading-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text-body-lg { font-size: 18px; font-weight: 400; line-height: 1.65; }
+.text-body-md { font-size: 16px; font-weight: 400; line-height: 1.65; }
+.text-body-sm { font-size: 14px; font-weight: 400; line-height: 1.5; }
+.text-caption  { font-size: 12px; font-weight: 500; }
+
+/* === COLORS === */
+.text-gold { color: var(--color-solar-gold); }
+.text-navy { color: var(--color-deep-navy); }
+.text-white { color: var(--color-star-white); }
+.text-on-dark { color: var(--color-on-dark); }
+.text-muted { color: var(--color-ink-muted); }
+.text-crimson { color: var(--color-crimson-pop); }
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-pad-desktop) 0;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-gold {
+  background: var(--gradient-gold);
+  color: var(--color-deep-navy);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 184, 0, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-solar-gold);
+  border: 2px solid var(--color-solar-gold);
+}
+
+.btn-outline:hover {
+  background: var(--color-solar-gold);
+  color: var(--color-deep-navy);
+}
+
+/* === CARDS === */
+.card {
+  background: rgba(45, 42, 110, 0.6);
+  border: 1px solid rgba(255, 184, 0, 0.15);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(255, 184, 0, 0.4);
+}
+
+/* === SCROLL REVEAL === */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-deep-navy); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-solar-gold);
+  border-radius: 3px;
+}
+
+/* === SELECTION === */
+::selection {
+  background: var(--color-solar-gold);
+  color: var(--color-deep-navy);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 640px) {
+  .section {
+    padding: var(--section-pad-mobile) 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* === PREFERS REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

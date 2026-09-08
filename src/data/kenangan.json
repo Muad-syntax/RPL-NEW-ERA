@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "judul": "Kenangan 1",
+    "foto": "/assets/images/kenangan/kenangan(1).png",
+    "kategori": "Kegiatan Kelas",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 2,
+    "judul": "Kenangan 2",
+    "foto": "/assets/images/kenangan/kenangan(8).png",
+    "kategori": "Semua",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 3,
+    "judul": "Kenangan 3",
+    "foto": "/assets/images/kenangan/kenangan(9).png",
+    "kategori": "Semua",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 4,
+    "judul": "Kenangan 4",
+    "foto": "/assets/images/kenangan/kenangan(10).png",
+    "kategori": "Semua",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 5,
+    "judul": "Kenangan 5",
+    "foto": "/assets/images/kenangan/kenangan(11).png",
+    "kategori": "Semua",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 6,
+    "judul": "Kenangan 6",
+    "foto": "/assets/images/kenangan/kenangan(12).png",
+    "kategori": "Semua",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 7,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/kenangan(13).png",
+    "kategori": "Kegiatan Kelas",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "jabatan": "Ketua Kelas",
+    "nama": "Muad",
+    "foto": "../../assets/images/pengurus/muad.png",
+    "badgeColor": "gold"
+  },
+  {
+    "id": 2,
+    "jabatan": "Wakil Ketua Kelas",
+    "nama": "Zein",
+    "foto": "../../assets/images/pengurus/zein.jpg",
+    "badgeColor": "silver"
+  },
+  {
+    "id": 3,
+    "jabatan": "Sekretaris",
+    "nama": "Nazla",
+    "foto": "",
+    "badgeColor": "teal"
+  },
+  {
+    "id": 4,
+    "jabatan": "Wakil Sekretaris",
+    "nama": "Naila",
+    "foto": "",
+    "badgeColor": "teal"
+  },
+  {
+    "id": 5,
+    "jabatan": "Bendahara",
+    "nama": "Azamah",
+    "foto": "",
+    "badgeColor": "blue"
+  },
+  {
+    "id": 6,
+    "jabatan": "Wakil Bendahara",
+    "nama": "Khaila",
+    "foto": "",
+    "badgeColor": "blue"
+  },
+  {
+    "id": 7,
+    "jabatan": "Seksi Kebersihan",
+    "nama": "Afif",
+    "foto": "../../assets/images/pengurus/afif.jpg",
+    "badgeColor": "green"
+  }
+]

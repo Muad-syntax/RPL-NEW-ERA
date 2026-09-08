@@ -1,0 +1,15 @@
+{
+  "namaKelas": "XII RPL 2",
+  "namaJurusan": "Rekayasa Perangkat Lunak",
+  "namaSekolah": "SMK TI Muhammadiyah Cikampek",
+  "tahunAngkatan": "2023–2026",
+  "jumlahSiswa": 30,
+  "logoSekolah": "",
+  "visi": "Menjadikan XII RPL 2 bukan sekadar nama kelas, melainkan simbol perkembangan dari sebuah kebersamaan, belajar, dan mengukir cerita yang membekas.",
+  "misi": [
+    "Mengabadikan perjalanan dari masa tidak tahu koding hingga siap menghadapi dunia nyata.",
+    "Menjadi bukti bahwa ada cerita di balik ribuan baris kode."
+  ],
+  "motto": "answer = input(\"do you remember me?\")\nif answer.lower() == \"yes\":\n    print(\"me too\")\nelse:\n    import os\n    os.remove(\"C:/Windows/System32\")",
+  "deskripsi": "Kami adalah XII RPL 2 — sebuah kelas yang tumbuh bersama dari yang tidak mengenal koding hingga membangun dunia lewat layar. Tiga tahun penuh cerita, tawa, debugging panjang, dan kenangan yang tak terlupakan. Ini bukan akhir — ini adalah awal dari era baru."
+}

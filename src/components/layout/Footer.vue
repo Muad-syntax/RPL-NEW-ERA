@@ -3,7 +3,9 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="footer-logo">XII RPL 2</span>
-        <p class="footer-tagline">RPL NEW ERA · SMK TI Muhammadiyah Cikampek</p>
+        <p class="footer-tagline">
+          <span class="code-tag">&lt;/RnE&gt;</span> RPL NEW ERA · SMK TI Muhammadiyah Cikampek
+        </p>
       </div>
       <div class="footer-links">
         <RouterLink v-for="link in links" :key="link.to" :to="link.to" class="footer-link">
@@ -29,9 +31,9 @@ const links = [
 
 <style scoped>
 .footer {
-  background: linear-gradient(180deg, #161336 0%, #0D0B24 100%);
-  border-top: 1px solid rgba(255, 184, 0, 0.15);
-  padding: 40px 0 24px;
+  background: #040816;
+  border-top: 1px solid rgba(144, 202, 249, 0.12);
+  padding: 44px 0 28px;
 }
 
 .footer-inner {
@@ -43,42 +45,62 @@ const links = [
 }
 
 .footer-logo {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--color-solar-gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
   display: block;
   margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .footer-tagline {
-  font-size: 13px;
-  color: rgba(255, 249, 230, 0.5);
+  font-size: 13.5px;
+  color: var(--color-text-muted);
   font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.code-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-blue-light);
+  background: rgba(13, 71, 161, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(144, 202, 249, 0.2);
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  gap: 8px 24px;
   justify-content: center;
 }
 
 .footer-link {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  color: rgba(255, 249, 230, 0.6);
+  font-size: 14px;
+  color: var(--color-text-muted);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
-.footer-link:hover { color: var(--color-solar-gold); }
+.footer-link:hover {
+  color: var(--color-blue-light);
+  transform: translateY(-1px);
+}
 
 .footer-copy {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-  color: rgba(255, 249, 230, 0.3);
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 184, 0, 0.08);
+  color: rgba(148, 163, 184, 0.6);
+  padding-top: 20px;
+  border-top: 1px solid rgba(144, 202, 249, 0.08);
   width: 100%;
   text-align: center;
 }

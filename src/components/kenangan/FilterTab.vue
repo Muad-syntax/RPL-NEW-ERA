@@ -26,35 +26,37 @@ defineEmits(['update:modelValue'])
 .filter-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .filter-btn {
-  padding: 8px 20px;
-  border-radius: 20px;
-  border: 1.5px solid rgba(255, 184, 0, 0.2);
-  background: transparent;
-  color: rgba(255, 249, 230, 0.65);
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(144, 202, 249, 0.2);
+  background: rgba(13, 26, 56, 0.5);
+  color: var(--color-text-muted);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
 }
 
 .filter-btn:hover {
-  border-color: rgba(255, 184, 0, 0.5);
-  color: var(--color-solar-gold);
-  background: rgba(255, 184, 0, 0.07);
+  border-color: rgba(33, 150, 243, 0.5);
+  color: #FFFFFF;
+  background: rgba(33, 150, 243, 0.12);
+  transform: translateY(-1px);
 }
 
 .filter-btn.active {
-  background: var(--gradient-gold);
-  color: var(--color-deep-navy);
-  border-color: transparent;
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  border-color: rgba(144, 202, 249, 0.4);
   font-weight: 600;
-  box-shadow: 0 4px 16px rgba(255, 184, 0, 0.3);
+  box-shadow: 0 4px 18px rgba(33, 150, 243, 0.35);
 }
 </style>

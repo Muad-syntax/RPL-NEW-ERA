@@ -4,9 +4,9 @@
     <header class="page-header section">
       <div class="container text-center">
         <span class="sub-heading reveal">Identitas & Cerita Kami</span>
-        <h1 class="page-title text-display-xl text-gold reveal">Tentang XII RPL 2</h1>
+        <h1 class="page-title text-display-xl text-gradient-primary reveal">Tentang XII RPL 2</h1>
         <p class="page-desc reveal">
-          Mengenal keluarga besar Rekayasa Perangkat Lunak angkatan 2023–2026.
+          Mengenal keluarga besar Rekayasa Perangkat Lunak angkatan 2026–2027.
         </p>
       </div>
     </header>
@@ -17,19 +17,19 @@
         <!-- Stats Counter Row -->
         <div class="stats-grid reveal">
           <div class="stat-card card">
-            <span class="stat-num">{{ animatedCount }}</span>
+            <span class="stat-num text-gradient-blue">{{ animatedCount }}</span>
             <span class="stat-label">Siswa & Siswi</span>
           </div>
           <div class="stat-card card">
-            <span class="stat-num">3</span>
+            <span class="stat-num text-gradient-blue">3</span>
             <span class="stat-label">Tahun Perjalanan</span>
           </div>
           <div class="stat-card card">
-            <span class="stat-num">2026</span>
+            <span class="stat-num text-gradient-blue">2027</span>
             <span class="stat-label">Tahun Kelulusan</span>
           </div>
           <div class="stat-card card">
-            <span class="stat-num">1</span>
+            <span class="stat-num text-gradient-blue">1</span>
             <span class="stat-label">Keluarga Selamanya</span>
           </div>
         </div>
@@ -38,19 +38,25 @@
         <div class="about-grid">
           <!-- Left: About Text & Visi Misi -->
           <div class="about-info reveal">
-            <h2 class="section-heading text-heading-md text-gold">Siapa Kami?</h2>
+            <h2 class="section-heading text-heading-md text-blue-light">Siapa Kami?</h2>
             <p class="about-text">
               {{ info.deskripsi }}
             </p>
 
             <div class="visi-misi-wrap">
               <div class="visi-card card">
-                <h3 class="vm-title">🎯 Visi</h3>
+                <div class="vm-header">
+                  <span class="vm-icon">🎯</span>
+                  <h3 class="vm-title">Visi</h3>
+                </div>
                 <p class="vm-text">"{{ info.visi }}"</p>
               </div>
 
               <div class="misi-card card">
-                <h3 class="vm-title">🚀 Misi</h3>
+                <div class="vm-header">
+                  <span class="vm-icon">🚀</span>
+                  <h3 class="vm-title">Misi</h3>
+                </div>
                 <ul class="misi-list">
                   <li v-for="(m, idx) in info.misi" :key="idx">
                     {{ m }}
@@ -73,7 +79,7 @@
                 />
                 <div v-else class="school-logo-placeholder">
                   <span>🏛</span>
-                  <small>[ Logo SMK TI Muhammadiyah Cikampek ]</small>
+                  <small>SMK TI Muhammadiyah Cikampek</small>
                 </div>
               </div>
               <h3 class="school-name">{{ info.namaSekolah }}</h3>
@@ -90,10 +96,10 @@
                   <span class="win-btn green"></span>
                 </div>
                 <span class="file-name">motto_rpl2.py</span>
-                <span class="lang-tag">Python</span>
+                <span class="lang-tag">&lt;/RnE&gt; Python</span>
               </div>
               <div class="editor-body">
-                <pre class="code-block"><code><span class="c-dim"># Motto Resmi XII RPL 2</span>
+                <pre class="code-block"><code><span class="c-dim"># Motto Resmi XII RPL 2 — RPL NEW ERA</span>
 <span class="c-var">answer</span> = <span class="c-func">input</span>(<span class="c-str">"do you remember me?"</span>)
 
 <span class="c-kw">if</span> <span class="c-var">answer</span>.<span class="c-func">lower</span>() == <span class="c-str">"yes"</span>:
@@ -142,15 +148,16 @@ onMounted(() => {
 
 .page-header {
   background: var(--gradient-hero);
-  border-bottom: 1px solid rgba(255, 184, 0, 0.1);
-  padding: 60px 0 40px;
+  border-bottom: 1px solid rgba(144, 202, 249, 0.12);
+  padding: 64px 0 44px;
 }
 
 .sub-heading {
-  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
@@ -162,9 +169,10 @@ onMounted(() => {
 
 .page-desc {
   font-size: 16px;
-  color: rgba(255, 249, 230, 0.7);
+  color: var(--color-text-body);
   max-width: 600px;
   margin: 0 auto;
+  opacity: 0.85;
 }
 
 /* Stats */
@@ -191,24 +199,24 @@ onMounted(() => {
 }
 
 .stat-num {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(32px, 4vw, 44px);
-  font-weight: 700;
-  color: var(--color-solar-gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 800;
   line-height: 1;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
 .stat-label {
   font-size: 13px;
-  color: rgba(255, 249, 230, 0.6);
+  color: var(--color-text-muted);
   font-weight: 500;
 }
 
 /* About Layout */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 36px;
 }
 
@@ -225,7 +233,7 @@ onMounted(() => {
 .about-text {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(255, 249, 230, 0.85);
+  color: var(--color-text-body);
   margin-bottom: 24px;
 }
 
@@ -237,20 +245,31 @@ onMounted(() => {
 }
 
 .visi-card, .misi-card {
-  padding: 20px 24px;
+  padding: 22px 26px;
+}
+
+.vm-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.vm-icon {
+  font-size: 18px;
 }
 
 .vm-title {
-  font-size: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
   font-weight: 700;
-  color: var(--color-solar-gold);
-  margin-bottom: 8px;
+  color: var(--color-blue-light);
 }
 
 .vm-text {
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(255, 249, 230, 0.85);
+  color: var(--color-text-body);
   font-style: italic;
 }
 
@@ -263,8 +282,8 @@ onMounted(() => {
 
 .misi-list li {
   font-size: 14px;
-  color: rgba(255, 249, 230, 0.85);
-  line-height: 1.5;
+  color: var(--color-text-body);
+  line-height: 1.55;
 }
 
 /* School Card */
@@ -286,16 +305,16 @@ onMounted(() => {
 }
 
 .school-logo-placeholder {
-  width: 100px;
-  height: 100px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
-  border: 2px dashed rgba(255, 184, 0, 0.3);
+  border: 2px dashed rgba(144, 202, 249, 0.35);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(30, 27, 75, 0.5);
-  padding: 8px;
+  background: rgba(13, 32, 70, 0.5);
+  padding: 10px;
 }
 
 .school-logo-placeholder span {
@@ -303,47 +322,51 @@ onMounted(() => {
 }
 
 .school-logo-placeholder small {
-  font-size: 8px;
-  color: var(--color-solar-gold);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9px;
+  color: var(--color-blue-light);
   text-align: center;
   margin-top: 2px;
+  line-height: 1.2;
 }
 
 .school-name {
-  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 19px;
   font-weight: 700;
-  color: var(--color-star-white);
+  color: #FFFFFF;
   margin-bottom: 4px;
 }
 
 .school-class {
   font-size: 14px;
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .school-year {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-  color: rgba(255, 249, 230, 0.5);
+  color: var(--color-text-muted);
 }
 
 /* VS Code Terminal Moto */
 .code-editor-card {
-  background: #1e1e1e;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #080E1E;
+  border-radius: 14px;
+  border: 1px solid rgba(144, 202, 249, 0.2);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
 }
 
 .editor-header {
-  background: #252526;
+  background: #0D1A38;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(144, 202, 249, 0.1);
 }
 
 .window-buttons {
@@ -352,8 +375,8 @@ onMounted(() => {
 }
 
 .win-btn {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
 }
 .win-btn.red { background: #ff5f56; }
@@ -361,36 +384,36 @@ onMounted(() => {
 .win-btn.green { background: #27c93f; }
 
 .file-name {
-  font-family: monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-  color: #cccccc;
+  color: #CBD5E1;
 }
 
 .lang-tag {
-  font-family: monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: #007acc;
+  color: var(--color-blue-primary);
   font-weight: 600;
 }
 
 .editor-body {
-  padding: 16px 20px;
-  font-family: 'Consolas', 'Courier New', monospace;
+  padding: 18px 20px;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
-  line-height: 1.6;
-  background: #1e1e1e;
+  line-height: 1.65;
+  background: #080E1E;
   overflow-x: auto;
 }
 
 .code-block {
   margin: 0;
-  color: #d4d4d4;
+  color: #E2E8F0;
 }
 
 /* Syntax Highlighting Colors */
-.c-dim { color: #6a9955; font-style: italic; }
-.c-kw { color: #c586c0; font-weight: 600; }
-.c-func { color: #dcdcaa; }
-.c-str { color: #ce9178; }
-.c-var { color: #9cdcfe; }
+.c-dim { color: #64748B; font-style: italic; }
+.c-kw { color: #F472B6; font-weight: 600; }
+.c-func { color: #93C5FD; }
+.c-str { color: #86EFAC; }
+.c-var { color: #67E8F9; }
 </style>

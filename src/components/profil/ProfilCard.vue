@@ -40,7 +40,7 @@ defineProps({
   mapel: { type: String, default: '' },
   foto: { type: String, default: '' },
   badge: { type: String, default: '' },
-  badgeColor: { type: String, default: 'gold' },
+  badgeColor: { type: String, default: 'primary' },
   quote: { type: String, default: '' },
 })
 </script>
@@ -58,9 +58,9 @@ defineProps({
 
 .avatar-wrap {
   position: relative;
-  width: 140px;
-  height: 140px;
-  margin-bottom: 20px;
+  width: 136px;
+  height: 136px;
+  margin-bottom: 22px;
 }
 
 .avatar-img {
@@ -68,24 +68,24 @@ defineProps({
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--color-solar-gold);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 3px solid var(--color-blue-primary);
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.35);
 }
 
 .avatar-placeholder {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2D2A6E, #1E1B4B);
-  border: 3px dashed rgba(255, 184, 0, 0.4);
+  background: linear-gradient(135deg, #0D1A38, #070D1E);
+  border: 3px dashed rgba(144, 202, 249, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .avatar-placeholder .placeholder-icon {
-  font-size: 54px;
-  opacity: 0.4;
+  font-size: 52px;
+  opacity: 0.35;
 }
 
 .card-badge {
@@ -93,7 +93,7 @@ defineProps({
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .info-wrap {
@@ -101,45 +101,49 @@ defineProps({
 }
 
 .profil-name {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: var(--color-star-white);
+  color: #FFFFFF;
   margin-bottom: 4px;
+  letter-spacing: -0.01em;
 }
 
 .profil-gelar {
   font-size: 13px;
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
   font-weight: 500;
   margin-bottom: 6px;
 }
 
 .profil-mapel {
   font-size: 14px;
-  color: rgba(255, 249, 230, 0.7);
+  color: var(--color-text-muted);
   margin-bottom: 12px;
 }
 
 .profil-quote {
   font-size: 13px;
   font-style: italic;
-  color: rgba(255, 249, 230, 0.85);
-  background: rgba(30, 27, 75, 0.4);
-  padding: 10px 14px;
-  border-radius: 8px;
-  border-left: 3px solid var(--color-solar-gold);
+  color: var(--color-text-ice);
+  background: rgba(7, 13, 30, 0.6);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border-left: 3px solid var(--color-blue-primary);
   margin-top: 10px;
   text-align: left;
+  line-height: 1.5;
 }
 
 .placeholder-tag {
   margin-top: 14px;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: rgba(255, 184, 0, 0.6);
-  background: rgba(255, 184, 0, 0.08);
+  color: var(--color-blue-light);
+  background: rgba(13, 71, 161, 0.2);
   padding: 4px 10px;
   border-radius: 6px;
   display: inline-block;
+  border: 1px solid rgba(144, 202, 249, 0.15);
 }
 </style>

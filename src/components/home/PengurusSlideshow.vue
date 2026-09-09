@@ -1,8 +1,11 @@
 <template>
   <section class="slideshow-section section">
     <div class="container">
-      <h2 class="section-title text-display-lg text-gold reveal">Pengurus Kelas</h2>
-      <p class="section-sub reveal">XII RPL 2 · Periode 2025–2026</p>
+      <div class="section-header text-center">
+        <span class="section-tag reveal">Struktur Organisasi</span>
+        <h2 class="section-title text-display-lg text-gradient-primary reveal">Pengurus Kelas</h2>
+        <p class="section-sub reveal">XII RPL 2 · Periode 2025–2026</p>
+      </div>
     </div>
 
     <div
@@ -33,14 +36,14 @@
               <div v-else class="slide-placeholder" :aria-label="`Placeholder foto ${item.nama}`">
                 <div class="placeholder-icon">👤</div>
                 <span class="placeholder-label">[ Foto {{ item.nama }} ]</span>
-                <span class="placeholder-hint">Letakkan foto di /assets/images/pengurus/</span>
+                <span class="placeholder-hint">src/assets/images/pengurus/</span>
               </div>
 
               <!-- Gradient overlay -->
               <div class="slide-overlay" />
 
               <!-- Badge -->
-              <BadgePill :color="item.badgeColor" class="slide-badge">
+              <BadgePill :color="item.badgeColor || 'primary'" class="slide-badge">
                 {{ item.jabatan }}
               </BadgePill>
 
@@ -55,8 +58,12 @@
       </div>
 
       <!-- Arrow Navigation -->
-      <button class="arrow arrow-left" @click="prev" aria-label="Slide sebelumnya">&#8249;</button>
-      <button class="arrow arrow-right" @click="next" aria-label="Slide berikutnya">&#8250;</button>
+      <button class="arrow arrow-left" @click="prev" aria-label="Slide sebelumnya">
+        <span>&#8249;</span>
+      </button>
+      <button class="arrow arrow-right" @click="next" aria-label="Slide berikutnya">
+        <span>&#8250;</span>
+      </button>
     </div>
 
     <!-- Dot indicators -->
@@ -107,36 +114,47 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
 
 <style scoped>
 .slideshow-section {
-  background: linear-gradient(180deg, #1E1B4B 0%, #161336 100%);
+  background: var(--gradient-surface);
+  position: relative;
   overflow: hidden;
 }
 
-.section-title {
-  text-align: center;
+.section-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue-light);
+  font-weight: 600;
+  display: block;
   margin-bottom: 8px;
 }
+
+.section-title {
+  margin-bottom: 8px;
+}
+
 .section-sub {
-  text-align: center;
   font-size: 14px;
-  color: rgba(255, 249, 230, 0.5);
-  margin-bottom: 40px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 36px;
+  letter-spacing: 0.05em;
 }
 
 /* Slideshow */
 .slideshow-wrap {
   position: relative;
-  max-width: 420px;
-  margin: 0 auto 24px;
+  max-width: 400px;
+  margin: 0 auto 20px;
 }
 
 .slides-track {
   position: relative;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   overflow: hidden;
   aspect-ratio: 3/4;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,184,0,0.2);
+  box-shadow: 0 20px 50px rgba(3, 8, 22, 0.7), 0 0 0 1px rgba(144, 202, 249, 0.2);
+  background: #070D1E;
 }
 
 .slides-container {
@@ -154,7 +172,7 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   width: 100%;
   height: 100%;
   position: relative;
-  background: #161336;
+  background: #0D1A38;
 }
 
 .slide-img {
@@ -172,27 +190,27 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(135deg, #2D2A6E, #1E1B4B);
-  border: 2px dashed rgba(255, 184, 0, 0.3);
+  background: linear-gradient(135deg, #0D1A38, #070D1E);
+  border: 2px dashed rgba(144, 202, 249, 0.25);
 }
 
 .placeholder-icon {
-  font-size: 64px;
+  font-size: 56px;
   opacity: 0.3;
 }
 
 .placeholder-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
   font-weight: 600;
-  color: var(--color-solar-gold);
-  opacity: 0.7;
+  color: var(--color-blue-light);
+  opacity: 0.8;
 }
 
 .placeholder-hint {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: rgba(255, 249, 230, 0.35);
+  color: var(--color-text-muted);
   text-align: center;
   padding: 0 16px;
 }
@@ -201,7 +219,7 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
 .slide-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30,27,75,0) 30%, rgba(30,27,75,0.95) 100%);
+  background: linear-gradient(180deg, rgba(7, 13, 30, 0) 35%, rgba(7, 13, 30, 0.95) 100%);
 }
 
 .slide-badge {
@@ -220,16 +238,17 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
 }
 
 .slide-name {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: var(--color-star-white);
+  color: #FFFFFF;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .slide-jabatan {
   font-size: 13px;
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
   font-weight: 500;
   margin-top: 4px;
 }
@@ -239,28 +258,30 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(30, 27, 75, 0.8);
-  border: 1px solid rgba(255, 184, 0, 0.3);
-  color: var(--color-solar-gold);
-  font-size: 24px;
+  background: rgba(7, 13, 30, 0.85);
+  border: 1px solid rgba(144, 202, 249, 0.3);
+  color: var(--color-blue-light);
+  font-size: 22px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
   z-index: 3;
-  line-height: 1;
+  backdrop-filter: blur(8px);
 }
 .arrow:hover {
-  background: rgba(255, 184, 0, 0.2);
-  border-color: var(--color-solar-gold);
-  box-shadow: 0 0 16px rgba(255, 184, 0, 0.3);
+  background: var(--color-blue-primary);
+  border-color: var(--color-blue-light);
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
+  transform: translateY(-50%) scale(1.08);
 }
-.arrow-left  { left: -20px; }
-.arrow-right { right: -20px; }
+.arrow-left  { left: -21px; }
+.arrow-right { right: -21px; }
 
 /* Dots */
 .dots-wrap {
@@ -273,25 +294,26 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 249, 230, 0.2);
+  background: rgba(144, 202, 249, 0.25);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .dot.active {
-  background: var(--color-solar-gold);
+  background: var(--color-blue-primary);
   transform: scale(1.3);
-  box-shadow: 0 0 8px rgba(255, 184, 0, 0.5);
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.7);
+  width: 20px;
+  border-radius: 4px;
 }
 
 /* Thumbnail strip */
 .thumb-strip {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   overflow-x: auto;
   padding-bottom: 8px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,184,0,0.3) transparent;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 24px;
@@ -301,18 +323,22 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  background: none;
-  border: 2px solid rgba(255, 184, 0, 0.15);
-  border-radius: 10px;
-  padding: 8px 12px;
+  background: rgba(13, 26, 56, 0.4);
+  border: 1px solid rgba(144, 202, 249, 0.15);
+  border-radius: 12px;
+  padding: 8px 14px;
   cursor: pointer;
   transition: all 0.2s ease;
-  min-width: 80px;
+  min-width: 84px;
 }
 .thumb:hover,
 .thumb.active {
-  border-color: var(--color-solar-gold);
-  background: rgba(255, 184, 0, 0.08);
+  border-color: var(--color-blue-primary);
+  background: rgba(33, 150, 243, 0.12);
+  transform: translateY(-2px);
+}
+.thumb.active {
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.2);
 }
 .thumb-img {
   width: 44px;
@@ -320,31 +346,31 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid transparent;
-  background: rgba(45, 42, 110, 0.8);
+  background: #070D1E;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: border-color 0.2s;
 }
-.thumb.active .thumb-img { border-color: var(--color-solar-gold); }
+.thumb.active .thumb-img { border-color: var(--color-blue-primary); }
 .thumb-img img { width: 100%; height: 100%; object-fit: cover; }
 .thumb-placeholder {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: var(--color-solar-gold);
-  opacity: 0.6;
+  color: var(--color-blue-light);
+  opacity: 0.8;
 }
 .thumb-name {
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 600;
-  color: var(--color-on-dark);
+  color: #FFFFFF;
   text-align: center;
   white-space: nowrap;
 }
 .thumb-role {
   font-size: 10px;
-  color: rgba(255, 249, 230, 0.4);
+  color: var(--color-text-muted);
   text-align: center;
   white-space: nowrap;
 }
@@ -355,13 +381,13 @@ const { current, next, prev, goTo, pause, resume, onTouchStart, onTouchEnd } =
   position: absolute;
   inset: 0;
 }
-.slide-enter-from { opacity: 0; transform: translateX(40px); }
-.slide-leave-to   { opacity: 0; transform: translateX(-40px); }
+.slide-enter-from { opacity: 0; transform: translateX(30px); }
+.slide-leave-to   { opacity: 0; transform: translateX(-30px); }
 
 @media (max-width: 640px) {
   .slideshow-wrap { max-width: 320px; }
-  .arrow-left  { left: -12px; }
-  .arrow-right { right: -12px; }
+  .arrow-left  { left: -10px; }
+  .arrow-right { right: -10px; }
   .thumb-strip { flex-wrap: nowrap; justify-content: flex-start; }
 }
 </style>

@@ -4,7 +4,7 @@
     <header class="page-header section">
       <div class="container text-center">
         <span class="sub-heading reveal">Arsip Momen Indah</span>
-        <h1 class="page-title text-display-xl text-gold reveal">Galeri Kenangan</h1>
+        <h1 class="page-title text-display-xl text-gradient-primary reveal">Galeri Kenangan</h1>
         <p class="page-desc reveal">
           Menyimpan setiap tawa, kerja keras, dan kebersamaan tiga tahun perjalanan di XII RPL 2.
         </p>
@@ -81,15 +81,16 @@ const { isOpen, currentIndex, open, close, next, prev, onTouchStart, onTouchEnd 
 
 .page-header {
   background: var(--gradient-hero);
-  border-bottom: 1px solid rgba(255, 184, 0, 0.1);
-  padding: 60px 0 40px;
+  border-bottom: 1px solid rgba(144, 202, 249, 0.12);
+  padding: 64px 0 44px;
 }
 
 .sub-heading {
-  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
@@ -101,8 +102,9 @@ const { isOpen, currentIndex, open, close, next, prev, onTouchStart, onTouchEnd 
 
 .page-desc {
   font-size: 16px;
-  color: rgba(255, 249, 230, 0.7);
+  color: var(--color-text-body);
   max-width: 600px;
   margin: 0 auto;
+  opacity: 0.85;
 }
 </style>

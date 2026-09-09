@@ -4,7 +4,7 @@
     <header class="page-header section">
       <div class="container text-center">
         <span class="sub-heading reveal">Pahlawan Baris Kode</span>
-        <h1 class="page-title text-display-xl text-gold reveal">Jejak Pelajar</h1>
+        <h1 class="page-title text-display-xl text-gradient-primary reveal">Jejak Pelajar</h1>
         <p class="page-desc reveal">
           Penghargaan setinggi-tingginya untuk guru-guru produktif RPL yang telah menuntun kami mengenal logika, sintaks, dan arsitektur perangkat lunak.
         </p>
@@ -23,7 +23,7 @@
             :mapel="guru.mapel"
             :foto="guru.foto"
             badge="Guru Jurusan RPL"
-            badge-color="blue"
+            badge-color="primary"
           />
         </div>
       </div>
@@ -52,15 +52,16 @@ useScrollReveal()
 
 .page-header {
   background: var(--gradient-hero);
-  border-bottom: 1px solid rgba(255, 184, 0, 0.1);
-  padding: 60px 0 40px;
+  border-bottom: 1px solid rgba(144, 202, 249, 0.12);
+  padding: 64px 0 44px;
 }
 
 .sub-heading {
-  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
@@ -72,23 +73,24 @@ useScrollReveal()
 
 .page-desc {
   font-size: 16px;
-  color: rgba(255, 249, 230, 0.7);
+  color: var(--color-text-body);
   max-width: 600px;
   margin: 0 auto;
+  opacity: 0.85;
 }
 
 .guru-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
 @media (max-width: 680px) {
   .guru-grid {
     grid-template-columns: 1fr;
-    max-width: 420px;
+    max-width: 440px;
   }
 }
 </style>

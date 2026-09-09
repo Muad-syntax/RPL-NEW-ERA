@@ -2,7 +2,9 @@
   <div>
     <!-- Count Header -->
     <div class="grid-header" v-if="photos.length > 0">
-      <span class="photo-count">🖼 {{ photos.length }} Foto Kenangan</span>
+      <span class="photo-count">
+        <span class="count-icon">🖼</span> {{ photos.length }} Foto Kenangan
+      </span>
     </div>
 
     <!-- Empty State -->
@@ -27,14 +29,14 @@
       >
         <div class="photo-wrapper">
           <img
-            :src="photo.foto"
-            :alt="photo.judul || 'Foto Kenangan RPL 2'"
+            :src="photo.foto || photo.src"
+            :alt="photo.judul || photo.caption || 'Foto Kenangan RPL 2'"
             class="photo-img"
             loading="lazy"
           />
           <div class="photo-overlay">
             <span class="zoom-icon">🔍</span>
-            <p class="photo-caption">{{ photo.deskripsi }}</p>
+            <p class="photo-caption">{{ photo.deskripsi || photo.caption }}</p>
             <span v-if="photo.kategori" class="photo-badge">{{ photo.kategori }}</span>
           </div>
         </div>
@@ -61,21 +63,31 @@ defineEmits(['select'])
 }
 
 .photo-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-blue-light);
+  background: rgba(13, 71, 161, 0.25);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(144, 202, 249, 0.25);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.count-icon {
   font-size: 14px;
-  color: var(--color-solar-gold);
-  background: rgba(255, 184, 0, 0.1);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 184, 0, 0.2);
 }
 
 .empty-state {
   text-align: center;
-  padding: 60px 24px;
-  background: rgba(45, 42, 110, 0.3);
-  border: 2px dashed rgba(255, 184, 0, 0.25);
+  padding: 64px 24px;
+  background: rgba(13, 26, 56, 0.5);
+  border: 2px dashed rgba(144, 202, 249, 0.25);
   border-radius: var(--radius-card);
-  max-width: 500px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
@@ -86,29 +98,32 @@ defineEmits(['select'])
 }
 
 .empty-title {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 22px;
-  color: var(--color-solar-gold);
+  font-weight: 700;
+  color: #FFFFFF;
   margin-bottom: 8px;
 }
 
 .empty-desc {
   font-size: 14px;
-  color: rgba(255, 249, 230, 0.7);
+  color: var(--color-text-muted);
   margin-bottom: 20px;
 }
 
 .empty-hint {
   font-size: 12px;
-  color: rgba(255, 249, 230, 0.4);
-  background: rgba(30, 27, 75, 0.5);
-  padding: 8px 12px;
+  color: var(--color-text-muted);
+  background: rgba(7, 13, 30, 0.6);
+  padding: 8px 14px;
   border-radius: 8px;
   display: inline-block;
+  border: 1px solid rgba(144, 202, 249, 0.1);
 }
 
 .empty-hint code {
-  color: var(--color-solar-gold);
+  color: var(--color-blue-light);
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* Masonry Layout */
@@ -135,6 +150,8 @@ defineEmits(['select'])
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  padding: 0;
+  border-radius: var(--radius-card);
 }
 
 .photo-wrapper {
@@ -146,21 +163,21 @@ defineEmits(['select'])
 .photo-img {
   width: 100%;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .masonry-item:hover .photo-img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .photo-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(30, 27, 75, 0.95) 100%);
+  background: linear-gradient(180deg, transparent 35%, rgba(7, 13, 30, 0.95) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 16px;
+  padding: 18px;
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -173,23 +190,25 @@ defineEmits(['select'])
   position: absolute;
   top: 14px;
   right: 14px;
-  font-size: 18px;
-  background: rgba(30, 27, 75, 0.7);
-  padding: 6px;
+  font-size: 16px;
+  background: rgba(7, 13, 30, 0.75);
+  padding: 8px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 184, 0, 0.3);
+  border: 1px solid rgba(144, 202, 249, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .photo-caption {
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-star-white);
-  line-height: 1.3;
+  color: #FFFFFF;
+  line-height: 1.35;
 }
 
 .photo-badge {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: var(--color-solar-gold);
-  margin-top: 4px;
+  color: var(--color-blue-light);
+  margin-top: 6px;
 }
 </style>

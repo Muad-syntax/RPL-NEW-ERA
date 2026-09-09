@@ -37,54 +37,57 @@ Desain terinspirasi langsung dari logo RPL 2 — energik, berani, dan penuh sema
 
 ### 2.2 Palet Warna
 
-Diekstrak dari logo RPL 2 dan diperluas untuk kebutuhan UI profesional:
+Disesuaikan secara harmonis dengan identitas logo `</RnE>` dan kebutuhan UI modern, clean & profesional:
 
 ```
-/* === WARNA PRIMER === */
---color-solar-gold:     #FFB800;   /* Kuning utama logo — energi & identitas */
---color-amber-burst:    #E8831A;   /* Oranye gradient logo — kehangatan */
---color-deep-navy:      #1E1B4B;   /* Navy gelap outline logo — ketegasan */
+/* === WARNA UTAMA (USER PALETTE) === */
+--color-blue-ice:       #E3F2FD;   /* Ice Blue — Highlight lembut, tag, text glow */
+--color-blue-light:     #90CAF9;   /* Sky Blue — Border glow, aksen sekunder, hover */
+--color-blue-primary:   #2196F3;   /* Electric Blue — CTA utama, active indicator, brand core */
+--color-blue-dark:      #0D47A1;   /* Sapphire Navy — Background section, banner apresiasi */
 
-/* === WARNA AKSEN === */
---color-crimson-pop:    #E63030;   /* Merah logo — highlight & CTA */
---color-star-white:     #FFFFFF;   /* Putih bersih — ruang napas */
---color-cloud-gray:     #F0F2F8;   /* Abu-abu lembut — background section */
+/* === LATAR BELAKANG DARK TECH === */
+--color-bg-dark:        #070D1E;   /* Deep Midnight Blue — Latar belakang utama */
+--color-bg-surface:     #0D1A38;   /* Dark Slate Blue — Surface & container */
+--color-bg-card:        rgba(13, 32, 70, 0.65); /* Glassmorphism card */
 
 /* === WARNA TEKS === */
---color-ink:            #1A1832;   /* Hampir hitam-biru — teks utama */
---color-ink-muted:      #4A4870;   /* Navy redup — teks sekunder */
---color-on-dark:        #FFF9E6;   /* Kuning gading — teks di atas dark */
+--color-text-main:      #FFFFFF;   /* Putih murni — judul & highlight */
+--color-text-body:      #E2E8F0;   /* Slate light — teks konten */
+--color-text-muted:     #94A3B8;   /* Muted gray-blue — caption & metadata */
 
 /* === GRADIEN KHAS === */
---gradient-hero:        linear-gradient(135deg, #1E1B4B 0%, #2D2A6E 50%, #1E1B4B 100%);
---gradient-gold:        linear-gradient(135deg, #FFD700 0%, #FFB800 50%, #E8831A 100%);
---gradient-card:        linear-gradient(180deg, rgba(30,27,75,0) 0%, rgba(30,27,75,0.85) 100%);
+--gradient-hero:        linear-gradient(135deg, #070D1E 0%, #0A1E45 50%, #0D47A1 100%);
+--gradient-primary:     linear-gradient(135deg, #2196F3 0%, #1976D2 60%, #0D47A1 100%);
+--gradient-glow:        linear-gradient(135deg, #E3F2FD 0%, #90CAF9 50%, #2196F3 100%);
+--gradient-banner:      linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #2196F3 100%);
 ```
 
-**Filosofi warna:** Navy dalam sebagai panggung, emas sebagai bintang, merah sebagai tanda seru. Bukan sekadar warna — ini bahasa visual RPL 2.
+**Filosofi warna:** Deep Sapphire Navy (#0D47A1) sebagai panggung berwibawa, Electric Blue (#2196F3) sebagai energi dan fokus aksi, Sky Blue (#90CAF9) dan Ice Blue (#E3F2FD) sebagai sentuhan elegan dan ruang bernapas. Selaras dengan logo `</RnE>` yang mencerminkan jiwa developer modern.
 
 ---
 
 ### 2.3 Tipografi
 
-**Dua pasang typeface — satu deklaratif, satu naratif:**
+**Sistem Tipografi Standar Industri:**
 
 ```
 /* === DISPLAY / HEADLINE === */
-Font: "Cinzel Decorative"  (Google Fonts)
-Peran: Judul utama "RPL NEW ERA", nama halaman besar
-Karakter: Serif klasik dengan nuansa agung & bersejarah — kontras elegan
-          dengan energi visual logo yang eksplosif
-Ukuran: 48px–96px
-Letter-spacing: 0.08em
-Color: --color-solar-gold (di atas dark) / --color-deep-navy (di atas light)
+Font: "Outfit"  (Google Fonts)
+Peran: Judul utama "RPL NEW ERA", nama halaman besar, heading section
+Karakter: Geometris modern berstandar industri tech — clean, sleek, dan berwibawa
+Ukuran: 28px–96px
 
 /* === BODY / SUBHEADING === */
 Font: "Plus Jakarta Sans"  (Google Fonts)
-Peran: Semua teks konten, label, navigasi, paragraf, caption
-Karakter: Humanis sans-serif modern — terbaca di semua ukuran, terasa hangat
-Ukuran: 14px–28px
-Line-height: 1.65 (body) / 1.25 (heading)
+Peran: Semua teks konten, deskripsi, navigasi, paragraf
+Karakter: Humanis sans-serif modern — legibilitas prima di semua ukuran layar
+Ukuran: 13.5px–18px
+
+/* === CODE & DEVELOPER ACCENTS === */
+Font: "JetBrains Mono"  (Google Fonts)
+Peran: Tag identitas, badge moto, terminal preview, </RnE> accents
+Karakter: Monospace presisi tinggi untuk sentuhan software engineering
 ```
 
 **Skala Tipografi:**

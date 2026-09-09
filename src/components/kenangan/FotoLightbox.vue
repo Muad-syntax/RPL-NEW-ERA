@@ -22,14 +22,14 @@
         <div class="lightbox-content" @click.stop>
           <div class="image-wrapper">
             <img
-              :src="currentPhoto.src"
-              :alt="currentPhoto.caption || 'Foto Kenangan'"
+              :src="currentPhoto.src || currentPhoto.foto"
+              :alt="currentPhoto.caption || currentPhoto.deskripsi || 'Foto Kenangan'"
               class="lightbox-img"
             />
           </div>
-          <div class="caption-wrapper" v-if="currentPhoto.caption || currentPhoto.kategori">
+          <div class="caption-wrapper" v-if="currentPhoto.caption || currentPhoto.deskripsi || currentPhoto.kategori">
             <span v-if="currentPhoto.kategori" class="kategori-tag">{{ currentPhoto.kategori }}</span>
-            <p class="caption-text">{{ currentPhoto.caption }}</p>
+            <p class="caption-text">{{ currentPhoto.caption || currentPhoto.deskripsi }}</p>
             <span v-if="currentPhoto.tanggal" class="date-text">📅 {{ currentPhoto.tanggal }}</span>
           </div>
         </div>
@@ -69,8 +69,9 @@ const currentPhoto = computed(() => {
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 8, 30, 0.92);
-  backdrop-filter: blur(10px);
+  background: rgba(4, 9, 22, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -82,13 +83,13 @@ const currentPhoto = computed(() => {
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 184, 0, 0.3);
-  color: var(--color-on-dark);
-  font-size: 20px;
+  background: rgba(144, 202, 249, 0.1);
+  border: 1px solid rgba(144, 202, 249, 0.25);
+  color: var(--color-text-main);
+  font-size: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -98,33 +99,37 @@ const currentPhoto = computed(() => {
 }
 
 .close-btn:hover {
-  background: var(--color-crimson-pop);
-  border-color: var(--color-crimson-pop);
-  color: #fff;
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #ff9b9b;
+  transform: scale(1.08);
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(30, 27, 75, 0.8);
-  border: 1px solid rgba(255, 184, 0, 0.4);
-  color: var(--color-solar-gold);
-  font-size: 32px;
+  background: rgba(13, 26, 56, 0.85);
+  border: 1px solid rgba(144, 202, 249, 0.3);
+  color: var(--color-blue-light);
+  font-size: 26px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
   z-index: 2010;
+  backdrop-filter: blur(8px);
 }
 
 .nav-btn:hover {
-  background: rgba(255, 184, 0, 0.2);
-  border-color: var(--color-solar-gold);
+  background: var(--color-blue-primary);
+  border-color: var(--color-blue-light);
+  color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.6);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -133,7 +138,7 @@ const currentPhoto = computed(() => {
 
 .lightbox-content {
   max-width: 900px;
-  max-height: 85vh;
+  max-height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,7 +146,7 @@ const currentPhoto = computed(() => {
 }
 
 .image-wrapper {
-  max-height: 70vh;
+  max-height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,11 +154,11 @@ const currentPhoto = computed(() => {
 
 .lightbox-img {
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 72vh;
   object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 184, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(144, 202, 249, 0.2);
 }
 
 .caption-wrapper {
@@ -164,32 +169,35 @@ const currentPhoto = computed(() => {
 
 .kategori-tag {
   display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-solar-gold);
-  background: rgba(255, 184, 0, 0.15);
-  padding: 3px 10px;
-  border-radius: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-blue-light);
+  background: rgba(13, 71, 161, 0.35);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(144, 202, 249, 0.25);
   margin-bottom: 6px;
 }
 
 .caption-text {
   font-size: 16px;
   font-weight: 500;
-  color: var(--color-star-white);
+  color: #FFFFFF;
   margin-bottom: 4px;
 }
 
 .date-text {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-  color: rgba(255, 249, 230, 0.5);
+  color: var(--color-text-muted);
 }
 
 /* Transitions */
 .lightbox-enter-active,
 .lightbox-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .lightbox-enter-from,
@@ -201,10 +209,10 @@ const currentPhoto = computed(() => {
   .nav-btn {
     width: 40px;
     height: 40px;
-    font-size: 24px;
+    font-size: 22px;
   }
-  .prev-btn { left: 10px; }
-  .next-btn { right: 10px; }
+  .prev-btn { left: 8px; }
+  .next-btn { right: 8px; }
   .close-btn { top: 16px; right: 16px; }
 }
 </style>

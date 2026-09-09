@@ -11,7 +11,7 @@
           </p>
           <div class="pesan-author">
             <span class="author-title">{{ title || 'Dari Kami yang Selalu Belajar' }}</span>
-            <span class="author-sub">Keluarga Besar XII RPL 2</span>
+            <span class="author-sub">Keluarga Besar XII RPL 2 · RPL NEW ERA</span>
           </div>
         </div>
       </div>
@@ -27,27 +27,28 @@ defineProps({
 
 <style scoped>
 .pesan-section {
-  padding: 60px 0;
+  padding: 64px 0;
 }
 
 .pesan-card {
-  background: var(--gradient-gold);
+  background: var(--gradient-banner);
   border-radius: var(--radius-card);
-  padding: 48px 40px;
+  padding: 52px 44px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(255, 184, 0, 0.25);
-  color: var(--color-deep-navy);
+  box-shadow: 0 20px 50px rgba(13, 71, 161, 0.4);
+  color: #FFFFFF;
+  border: 1px solid rgba(227, 242, 253, 0.3);
 }
 
 .quote-mark {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 20px;
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 160px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 180px;
   line-height: 1;
-  color: rgba(30, 27, 75, 0.12);
+  color: rgba(255, 255, 255, 0.12);
   pointer-events: none;
   font-weight: 900;
 }
@@ -55,19 +56,20 @@ defineProps({
 .pesan-content {
   position: relative;
   z-index: 1;
-  max-width: 860px;
+  max-width: 880px;
   margin: 0 auto;
   text-align: center;
 }
 
 .pesan-text {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
-  font-size: clamp(18px, 2.8vw, 26px);
-  font-weight: 700;
-  line-height: 1.6;
-  color: var(--color-deep-navy);
-  margin-bottom: 28px;
+  font-size: clamp(17px, 2.4vw, 23px);
+  font-weight: 500;
+  line-height: 1.75;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pesan-author {
@@ -77,24 +79,24 @@ defineProps({
 }
 
 .author-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #1a1540;
+  color: #E3F2FD;
 }
 
 .author-sub {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(30, 27, 75, 0.7);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(227, 242, 253, 0.8);
 }
 
 @media (max-width: 640px) {
   .pesan-card {
-    padding: 32px 20px;
+    padding: 36px 22px;
   }
 }
 </style>

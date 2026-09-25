@@ -23,15 +23,15 @@
   {
     "id": 4,
     "jabatan": "Wakil Sekretaris",
-    "nama": "Naila",
-    "foto": "",
+    "nama": "Nayla",
+    "foto": "../../assets/images/pengurus/nayla.png",
     "badgeColor": "teal"
   },
   {
     "id": 5,
     "jabatan": "Bendahara",
     "nama": "Azamah",
-    "foto": "",
+    "foto": "../../assets/images/pengurus/azamah.png",
     "badgeColor": "blue"
   },
   {
@@ -45,6 +45,13 @@
     "id": 7,
     "jabatan": "Seksi Kebersihan",
     "nama": "Afif",
+    "foto": "",
+    "badgeColor": "green"
+  },
+  {
+    "id": 8,
+    "jabatan": "Wakil Kebersihan",
+    "nama": "Arfan",
     "foto": "",
     "badgeColor": "green"
   }

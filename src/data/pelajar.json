@@ -2,15 +2,15 @@
   {
     "id": 1,
     "nama": "Pak Aoel",
-    "gelar": "",
-    "mapel": "— (akan dilengkapi)",
+    "gelar": "S.Kom",
+    "mapel": "PWPB",
     "foto": ""
   },
   {
     "id": 2,
     "nama": "Pak Haris",
     "gelar": "",
-    "mapel": "— (akan dilengkapi)",
-    "foto": ""
+    "mapel": "PBTGM",
+    "foto": "../../assets/images/pelajar/pak haris.png"
   }
 ]

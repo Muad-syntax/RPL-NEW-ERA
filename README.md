@@ -90,47 +90,6 @@ rpl-app/
 
 ---
 
-## 📝 Cara Update Konten
-
-Semua konten dikelola lewat file JSON — **tidak perlu menyentuh kode Vue**.
-
-### Menambah Foto Kenangan
-
-Buka `src/data/kenangan.json` dan tambahkan objek baru:
-
-```json
-{
-  "id": 999,
-  "src": "/assets/images/kenangan/foto-baru.jpg",
-  "caption": "Nama Kegiatan - Deskripsi Singkat",
-  "kategori": "Kegiatan Kelas",
-  "tanggal": "2026-09-01"
-}
-```
-
-### Mengubah Data Pengurus
-
-Edit `src/data/pengurus.json` dan sesuaikan nama, jabatan, atau path foto.
-
-### Mengubah Data Wali Kelas / Guru
-
-- Wali kelas → `src/data/pembimbing.json`
-- Guru jurusan → `src/data/pelajar.json`
-
----
-
-## 📐 Panduan Foto
-
-| Jenis | Rasio | Format | Maks |
-|-------|-------|--------|------|
-| Pengurus kelas | 3:4 portrait | JPG/WebP | 500KB |
-| Wali kelas / Guru | 1:1 atau 3:4 | JPG/WebP | 500KB |
-| Foto kenangan | Bebas | JPG/WebP | 1MB |
-
-> 💡 Kompres foto sebelum upload menggunakan [squoosh.app](https://squoosh.app)
-
----
-
 ## 👥 Tim Pengembang
 
 Dibuat dengan ❤️ oleh **Kelas XII RPL 2**  

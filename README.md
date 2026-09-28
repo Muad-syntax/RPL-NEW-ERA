@@ -1,5 +1,5 @@
 # &lt;/RnE&gt; — XII RPL 2 · RPL NEW ERA
-<img src="public/logoRnE.png" alt="Logo RnE" width="450px" style="border-radius: 15px; margin-left: 100px;"/>
+<img src="public/logoRnE.png" alt="Logo RnE" width="100%" />
 
 > Website kenangan digital Kelas XII RPL 2 — Rekayasa Perangkat Lunak  
 > SMK TI Muhammadiyah Cikampek · Angkatan 2026

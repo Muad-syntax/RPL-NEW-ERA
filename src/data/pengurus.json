@@ -45,14 +45,14 @@
     "id": 7,
     "jabatan": "Seksi Kebersihan",
     "nama": "Afif",
-    "foto": "../../assets/images/pengurus/afif.png",
+    "foto": "../../assets/images/pengurus/logoRnE.png",
     "badgeColor": "green"
   },
   {
     "id": 8,
     "jabatan": "Wakil Kebersihan",
     "nama": "Arfan",
-    "foto": "",
+    "foto": "../../assets/images/pengurus/logo.png",
     "badgeColor": "green"
   }
 ]

@@ -10,41 +10,112 @@
     "id": 2,
     "judul": "Kenangan 2",
     "foto": "/assets/images/kenangan/kenangan(8).png",
-    "kategori": "Semua",
+    "kategori": "Lainnya",
     "deskripsi": "Momen kebersamaan XII RPL 2"
   },
   {
     "id": 3,
     "judul": "Kenangan 3",
     "foto": "/assets/images/kenangan/kenangan(9).png",
-    "kategori": "Semua",
+    "kategori": "Lainnya",
     "deskripsi": "Momen kebersamaan XII RPL 2"
   },
   {
     "id": 4,
     "judul": "Kenangan 4",
     "foto": "/assets/images/kenangan/kenangan(10).png",
-    "kategori": "Semua",
+    "kategori": "lainnya",
     "deskripsi": "Momen kebersamaan XII RPL 2"
   },
   {
     "id": 5,
     "judul": "Kenangan 5",
     "foto": "/assets/images/kenangan/kenangan(11).png",
-    "kategori": "Semua",
+    "kategori": "Lainnya",
     "deskripsi": "Momen kebersamaan XII RPL 2"
   },
   {
     "id": 6,
     "judul": "Kenangan 6",
     "foto": "/assets/images/kenangan/kenangan(12).png",
-    "kategori": "Semua",
+    "kategori": "Lainnya",
     "deskripsi": "Momen kebersamaan XII RPL 2"
   },
   {
     "id": 7,
     "judul": "Kenangan 7",
     "foto": "/assets/images/kenangan/kenangan(13).png",
+    "kategori": "Kegiatan Kelas",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 8,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/hutRi81.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 9,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/hutRI.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 10,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/Hut_RI_81.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 11,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/hariBatik.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 12,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/guru.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 13,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/dirgahayu.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 14,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/rpl.png",
+    "kategori": "Acara Sekolah",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 14,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/10_pplg.png",
+    "kategori": "Kegiatan Kelas",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  }
+  ,
+  {
+    "id": 15,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/PakRatno1.png",
+    "kategori": "Kegiatan Kelas",
+    "deskripsi": "Momen kebersamaan XII RPL 2"
+  },
+  {
+    "id": 15,
+    "judul": "Kenangan 7",
+    "foto": "/assets/images/kenangan/Ratno.png",
     "kategori": "Kegiatan Kelas",
     "deskripsi": "Momen kebersamaan XII RPL 2"
   }

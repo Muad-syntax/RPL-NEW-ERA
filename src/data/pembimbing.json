@@ -5,7 +5,7 @@
     "nama": "Ibu Silmi",
     "gelar": "",
     "mapel": "— (akan dilengkapi)",
-    "foto": "",
+    "foto": "../../assets/images/pengurus/logo.png",
     "quote": ""
   },
   {
@@ -14,16 +14,16 @@
     "nama": "Ibu Rinda",
     "gelar": "",
     "mapel": "— (akan dilengkapi)",
-    "foto": "",
+    "foto": "../../assets/images/pengurus/logo.png",
     "quote": ""
   },
   {
     "id": 3,
     "kelas": "XII",
-    "nama": "Ibu Dian",
+    "nama": "Mrs Dian",
     "gelar": "",
     "mapel": "— (akan dilengkapi)",
-    "foto": "",
+    "foto": "../../assets/images/pengurus/logo.png",
     "quote": ""
   }
 ]

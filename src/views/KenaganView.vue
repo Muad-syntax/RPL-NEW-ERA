@@ -60,7 +60,7 @@ const categories = [
   'Semua',
   'Kegiatan Kelas',
   'Acara Sekolah',
-  'Lainnya',
+  'Lainnya'
 ]
 
 const filteredPhotos = computed(() => {
